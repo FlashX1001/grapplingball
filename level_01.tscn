@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://be6rkp6m1emdv"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_cjdkb"]
+size = Vector3(103.186, 2, 101.532)
+
+[sub_resource type="BoxMesh" id="BoxMesh_trjfv"]
+
+[node name="Level" type="Node3D"]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+shape = SubResource( "BoxShape3D_cjdkb" )
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
+transform = Transform3D(50, 0, 0, 0, 1, 0, 0, 0, 50, 0, 0, 0)
+mesh = SubResource( "BoxMesh_trjfv" )
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.894256, 0.447556, 0, -0.447556, 0.894256, 0, 28.0452, 89.1108)
